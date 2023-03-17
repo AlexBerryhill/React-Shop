@@ -1,23 +1,22 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import logo from './logo.svg';
+// CSS
 import './App.css';
+// Components
 import Navbar from './components/Navbar';
-import Footer from './components/Footer'
+import Links from './components/Links';
+import Footer from './components/Footer';
+// Pages
 import Home from './pages/Home';
-import Links from './components/Links'
+import Search from './pages/Search';
 
 function App() {
   return (
     <Router>
-      {/* <Sidebar />
-      <Header /> */}
       <Navbar />
       <Links />
       <Routes>
         <Route path='/' exact element={<Home />} />
-        {/* <Route path='/assets' element={<Assets />} />
-        <Route path='/orders' element={<Orders />} />
-        <Route path='/overview' element={<Overview />} /> */}
+        <Route path='/search' element={<Search />} />
       </Routes>
       <Footer />
     </Router>
